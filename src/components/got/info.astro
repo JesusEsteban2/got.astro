@@ -1,0 +1,24 @@
+---
+import type { Char } from '../../types/types'
+
+type Props = {
+    character:Char
+}
+
+const {character}=Astro.props
+
+---
+
+<div >
+    <ul>
+        <li>Edad: {character.age} años</li>
+        <li>
+            Estado:
+            {
+                character.isAlive
+                 ? <i class="fas fa-thumbs-up"></i>
+                 :  <i class="fas fa-thumbs-down"></i>
+            }
+        </li>
+    </ul>
+</div>

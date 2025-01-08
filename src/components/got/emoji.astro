@@ -1,0 +1,32 @@
+---
+import type {Char} from '../../types/types';
+
+
+type Props = {
+  character: Char;
+};
+
+const {character}=Astro.props;
+
+const icon = {
+  king: '👑',
+  fighter: '⚔️',
+  adviser: '🔮',
+  squire: '🛡️',
+}
+
+const iconimg = icon[character.category] ;
+
+
+---
+
+<i class="emoji">{iconimg}</i>
+
+<style>
+.emoji {
+    font-style: normal;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+</style>
