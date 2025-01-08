@@ -63,7 +63,7 @@ A la hora de crear sitios estáticos, permite la inclusión de **layouts** y **p
 Para comenzar a usar Astro, primero debes crear un proyecto de la siguiente manera:
 
 ```bash
-npm create astro@latest
+npm create astro@latest o sudo npm create astro@latest
 ```
 
 El resultado será un conjunto de opciones en el terminal que permitirán definir las características del proyecto.
@@ -512,11 +512,11 @@ En el caso de los ficheros markdown, las marcas de ete lenguaje se convierten en
 ```markdown
 ---
 {
-  title: "Contact",
-  description: "Ejemplo de fichero md incluido en la carpeta pages de astro",
-  date: "2021-09-01",
-  tags: ["astro", "md"],
-  layout: "layouts/page.astro",
+  title: 'Contact',
+  description: 'Ejemplo de fichero md incluido en la carpeta pages de astro',
+  date: '2021-09-01',
+  tags: ['astro', 'md'],
+  layout: 'layouts/page.astro',
 }
 ---
 ```
@@ -892,10 +892,10 @@ A partir de esta definición, la carpeta correspondiente a la collection (en est
 
 ```markdown
 ---
-title: "El Quijote"
-author: "Miguel de Cervantes"
-img: "/img/quijote.jpg"
-description: "La historia de un hidalgo manchego que enloquece leyendo libros de caballerías y decide convertirse en caballero andante."
+title: 'El Quijote'
+author: 'Miguel de Cervantes'
+img: '/img/quijote.jpg'
+description: 'La historia de un hidalgo manchego que enloquece leyendo libros de caballerías y decide convertirse en caballero andante.'
 ...
 
 Texto del artículo
@@ -945,19 +945,19 @@ En cuanto a la definición, permite asignar un schema a las variables de entorno
 
 ```typescript
 // astro.config.mjs
-import { defineConfig, envField } from "astro/config";
+import { defineConfig, envField } from 'astro/config';
 
 export default defineConfig({
   env: {
     schema: {
       SHOW_BUY_BUTTON: envField.boolean({
         default: true,
-        context: "server",
-        access: "public",
+        context: 'server',
+        access: 'public',
       }),
       SCORE_API_ENDPOINT: envField.string({
-        context: "server",
-        access: "public",
+        context: 'server',
+        access: 'public',
       }),
     },
   },
