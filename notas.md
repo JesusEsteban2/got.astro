@@ -1,14 +1,14 @@
 gitignore para astro
 
-node_modules/
+node*modules/
 dist/
-_.tsbuildinfo
-.DS_Store
+*.tsbuildinfo
+.DS*Store
 .vercel
 .netlify
 \_site/
 .astro/
-scripts/smoke/_-main/
+scripts/smoke/*-main/
 scripts/memory/project/src/pages/
 benchmark/projects/
 benchmark/results/
@@ -49,3 +49,6 @@ examples/**/env.d.ts
 # https://github.com/withastro/astro/pull/11759#discussion_r1721444711)
 
 \*.code-workspace
+
+// activar sparse-checkout para permitir clonar solo una carpeta del repositorio.
+git config core.sparsecheckout true
